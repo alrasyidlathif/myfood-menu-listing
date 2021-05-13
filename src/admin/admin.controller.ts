@@ -6,7 +6,7 @@ import returnFormat from "../custom/return-format"
 import GeneralError from "../custom/exception/general-error"
 import { Admin } from "./admin.interface"
 import { config } from "../config/env.config"
-import { createToken } from "./admin.helper"
+import { createToken } from "../auth/auth.helper"
 
 /**
  * Controller Definitions
