@@ -6,6 +6,7 @@ import returnFormat from "../custom/return-format"
 import GeneralError from "../custom/exception/general-error"
 import { Admin } from "./admin.interface"
 import { config } from "../config/env.config"
+import { createToken } from "./admin.helper"
 
 /**
  * Controller Definitions
@@ -35,6 +36,9 @@ export async function login(
             return res.status(200).send(returnFormat(
                 "00",
                 "Success",
+                {
+                    "token": createToken(admin.username)
+                }
             ))
         }
     

@@ -11,5 +11,9 @@ export const config = {
     admin: {
         username: process.env.USR,
         password: process.env.PWD
+    },
+    token: {
+        secret: process.env.SECRET,
+        expire: process.env.EXPIRE
     }
 }
