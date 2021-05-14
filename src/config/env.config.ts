@@ -1,5 +1,8 @@
 import * as dotenv from "dotenv";
 import path from 'path';
+import { envCheck } from "./env.check";
+
+envCheck()
 
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
